@@ -80,8 +80,10 @@ public class TicTacToe {
             displayBoard();
             if (haveWinner()) {
                 System.out.printf("%s Wins!", player == 0 ? "X" : "O");
+                scanner.close();
             } else if (haveDraw()) {
                 System.out.println("Draw");
+                scanner.close();
             } else {
                 player = nextPlayer();
                 listenForInput();
